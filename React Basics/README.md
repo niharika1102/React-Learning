@@ -25,3 +25,32 @@ These components take in props into JS functions and return JSX/HTML code.
 # Class Components
 These components are ES6 classes which take in props and return JSX/HTML code.
 
+# Props
+They are optionsl inputs that the components can accept.
+When we have an idea of what data we want to pass, we pass it as attributes. When we have no idea of what kind of data has to be passed or we want to pass dynamic HTML, we pass them as children inside the component's opening and closing tag. These are rendered using `{props.children}` inside the specific component.
+Props are immutable. Think of them as constant values being passed which cant be changed.
+
+Some info about props:
+- We can pass default values for props to fall back onto. 
+<img src="https://i.imgur.com/2Sesdby.png">
+- We can pass functions as props. IT comes handy in cases like event management etc. 
+<img src="https://i.imgur.com/HbcMuVO.png">
+
+### Prop Validation
+It is used to check if the correct data types are being passed as props into the components.
+Consider it very similar to an interface in typescript.
+<img src="https://i.imgur.com/hFuhZvY.png">
+Here, we are describing what data types can each prop have for the component.
+
+### Prop Drilling
+It is when a prop gets passed from parents to child components without some components needing it. 
+Say, a prop gets passed from *App -> Parent -> Child -> Grandchild* and only the grandchild needs it. So, this is a case of prop drilling. 
+We can deal with it using **React Context and Redux.**
+
+### React Context
+We create a global kind of data store that allows access of data to all components. 
+
+Steps to use React Context:
+1. We create a context (a store of all data);
+2. Provide the context at the top of the component where the prop is defined. 
+3. Call the context wherever needed and use the prop value.
