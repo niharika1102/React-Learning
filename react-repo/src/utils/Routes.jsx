@@ -1,9 +1,8 @@
-import Home from "../pages/Home";
-import Props from "../pages/Props";
+import Home from "../components/home/Home";
 
 const routes = [
-  { path: "/", title: "Home", component: Home },
-  { path: "/props", title: "Props", component: Props },
-];
+    { path: '/', title: "Home", component: Home },
+
+]
 
 export default routes;
