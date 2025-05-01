@@ -51,6 +51,9 @@ We can deal with it using **React Context and Redux.**
 We create a global kind of data store that allows access of data to all components. 
 
 Steps to use React Context:
-1. We create a context (a store of all data);
+1. We create a context (a store of all data).
+<img src="https://media-hosting.imagekit.io/60436b226a984e64/Screenshot%202025-04-30%20231913.png?Expires=1840723381&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SzFWtV8LeCPooran1oXU5JMjMPSFCgUDnnaWK0bR~qIRxGemo6FIkmXbcrQX8-uH7R2ioBeZYUOoko2Ior6VFDYzg2HLZx1y5kmHR1zCjgUcqbUVSXh124r1BuJLNZ5Ao9an1Le0XAau82Cgzl~rXOW-MjMUnN0wmukFy6uqyafi3EGTeFiSEywdeS7VY1bBwc3OssUUuto-Wiy-CSzmwJTBihDlllb8aum1PBzgHA~ZEmHjEc6-RVvHvAUO~7QQUr5spxFjz0pQ4GrEoaqTZFzDYvyqb9c~sSGt4H48LITgkjxovijIBHeDnd~ifE00CmzNYSqd2GX6PSQFCaMzIQ__">
 2. Provide the context at the top of the component where the prop is defined. 
+<img src="https://media-hosting.imagekit.io/67f1a4e07ce64e77/Screenshot%202025-04-30%20232448.png?Expires=1840723381&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=noI3VF7X8lAdd60f7ECMQXCjjCXIDTx~umrbS4F9j6kxkyuscKUjoVM-KW28gIKY1kDZg5FhsDSU8E1kK5bRf4ZoUC7sG0-aAG1hwNYXquDxzwK4xQSGYsxxA1MCnFg~CobuyIrOPo0m~mE7fpIKa2dI4t551c-UDfo~uHremoWfSEnuFWoAKNetWtupg0gwz9bqP-v~Sw8IT1i-ooJVV2QrNSPptLHh68wkuCKQPDKKzNyjagScv6W-ZMnTep4S9hNvvOjjzDoc2BABIOpX~7xtOXoWEoZ7Z5kybBbEdkr31gfTug77vr09JaR4uhgjZsDf8GQuweua2pKN8sA-VA__">
 3. Call the context wherever needed and use the prop value.
+<img src="https://media-hosting.imagekit.io/be27eb9c32384c13/Screenshot%202025-04-30%20232503.png?Expires=1840723381&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=YNdNXFWzuUBCkd6bsoq6p17NX-CGME-29vV9e2fR-uIApakyiZ8XSeX3J7YaMeqvXDA0R~6OpGt~PKELzgaSzwk-Z6vovdr0I35bsVIqNbG-3yNwfLtgoL3JYi4TdjKqHZcHpfn6DDGjCHFFFc2gp9Cec1tI0ovu4kPdM7GnH37wmmlv~uChswMD2Wh-D1EoVKzkB2VCA6q1UiOLKFTxz9eRUI66q47UWoipbbwn2S16l4eU6i8oZr0nRpMJBiAGb9FVGavaG-AuAT4cGU4MRmi-8mNT6J4dZklnRmG~DFlRyAn9tAujpuQrdvyG6FxYZu9J0wnR2I5lBoELGQ9qwQ__">
