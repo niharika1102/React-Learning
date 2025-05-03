@@ -82,6 +82,19 @@ Steps to use React Context:
 ### State Hoisting
 - When 2 or more child components need a state, we hoist the state to the closest parent so that all children can access it. 
 <img src="https://media-hosting.imagekit.io/39cd4400b7094aca/screenshot_1746122067914.png?Expires=1840730069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=jkiHqAZYd4km9S-qGGjFhIwKtTRIloM6uOMNOooi3N7NCHEP5OXPzzsYTIe5gPMQFnxzRO~kp3sUMaKXA7sZg~4zYUUXCcVbdJUYhiZ4DEkIOFLltEraotqFiEdUWEKy6xNjguuzsnMbb8cGn5GQ2iOGlKXPnE0k0RsAU6rt25XWON91qhcCZ~DDh8mfrd0Gb90lqmFQz3mcX0Gi5jua-FFhYigNBa8cc7hHC244QPJNVPjQttlyax~0sGajCc9M5dgE3Rxdk1Vn-wwMfE2aCftUnnblokSpwmUzVrLfzc4IX4DEgkJhF8Cdb9rgrPPqf1kpjG9J7Fh4lAzgYccxyQ__">
-Here, since both *Counter* and *Message* components need the `count`, we put it in their parent component from where both can access it.
+Here, since both Counter and Message components need the "count", we put it in their parent component from where both can access it.
 - State is private to the component we declare it in. This means that only the component that declares the state can change or manage it. But, it does not mean that the state can't be sent to the component's children.
 - The children cannot update the parent's state directly, but they can do it indirectly using `useCallback`.
+
+# Event Handling
+- We must always pass the event handler function as a function and not a function call i.e., not as `clickHandler()` but as `clickHandler`.
+- We can pass the parent's events to its child as well.
+- We do not interact with the browser's native event objects directly when we deal with events. Instead, React wraps the browsers' events in its own wrapper called **SyntheticEvent**. It is basically used to maintain consistency across all browsers.
+- The event object clears out once the event handler finishes running. To persist it, we use `e.persist()`.
+
+### Prevent Default and Stop Propogation
+- Prevent default prevents the event from carrying out its default behaviour post the event execution is complete.
+- Stop Propogation stops the event from bubbling up to the parent element.
+
+### Event Bubbling
+- The event just doesn't stay in the current component. It goes all the way upto the DOM tree. To prevent this, we use `stopPropogation()`.
