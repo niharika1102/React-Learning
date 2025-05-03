@@ -4,6 +4,7 @@ import Context from "../pages/Context";
 import States from "../pages/States";
 import StateHoisting from "../pages/StateHoisting";
 import PropsAndStates from "../pages/PropsAndStates";
+import EventHandling from "../pages/EventHandling";
 
 const routes = [
   { path: "/", title: "Home", component: Home },
@@ -19,6 +20,11 @@ const routes = [
     path: "/props-and-states",
     title: "Props and States",
     component: PropsAndStates,
+  },
+  {
+    path: "/event-handling",
+    title: "Event Handling",
+    component: EventHandling,
   },
 ];
 
