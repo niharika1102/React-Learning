@@ -98,3 +98,16 @@ Here, since both Counter and Message components need the "count", we put it in t
 
 ### Event Bubbling
 - The event just doesn't stay in the current component. It goes all the way upto the DOM tree. To prevent this, we use `stopPropogation()`.
+
+# Methods as Props
+- If the child component needs to communicate with the parent component, we still use props for that purpose. 
+- But, for this, we pass a reference to the method as props to the child component.
+- We need this because in React, the flow of the application is unidirectional (parent to child). If the child wants to communicate with the parent, it cant modify the states of the parent directly. 
+
+<img src="https://media-hosting.imagekit.io/f6c5362165f04543/screenshot_1746815286673.png?Expires=1841423298&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tnK9ffczsqxUFDwuXFLlyc7W2Cn-aWWMMzqFFo090yyirl0XAEcoXDYcSq2JsZuQMFW3dq7UKQyqfwi0-pXsBdqbsel9Ps67vaNBKF59zLzTS9rqNyNni3QLGgx~W7-WWcOMA277KjAQpeiBS~4GPZEYeKDk9kjR8ui~3ZagwMs4J4m5rg730u6F1dVwA9Dz9Nrc9EwbF53JyJ1BZrZNOhQhkoSU5ZwYJU4rcMzDmIm-o6eEb8Qgwfp7Z1vEUvFKDSKHyQsBb1VPm9GPI4jmz7Ixd4eN~cF8lL-vf8FYKvEuDN9k99P4IumeZ1DArSyajCmGzbIW6rQ20q1FTe6zCg__">
+Here, the `App()` is the parent component. So, it passes a prop as method to the child component which is `InputForm`. 
+<img src="https://media-hosting.imagekit.io/8dd8268868514408/screenshot_1746815659241.png?Expires=1841423671&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=fnCtwSu2N0s89E3F6ClfPZc9dqNBi49amQ8YqZeFgkEwjGyK3XM1x68QNc6DFJ8BaqIH~EN9l753V1didpHmJFUd4yxdAeW6AheTmpDb9D4CLHbFSSHErFpWZ9F6JRomu6etoKfVomrwhOFZqs~MTZzONWgf-pcEvaSp7CHs64xN3Zr6Ut-SCODB7q9jxDtsSm1kJ0Rkp1hkQRukfIgv78SBX2rupRue3HkF~bW8rwSEniNv-S-P-3nEDSpVuTJJ8hCW9GzLt~uOU2Cdulh22IFRnB3zrz-Plcn5PCjgqlkF7RqIT2iWU5nfmFsZ8j87RlWUblvzkQt-VUl8LHHxEw__">
+This is the child component. It takes in value from the user and sends it back to the parent. This way, it communicates with the parent. 
+
+- The child does not change the parent's state. It just calls a function to provide the state value to the parent.
+- If we are passing methods to deeply nested components or we want to optimize performance, we can use `useCallback()` to memoize the function. 
